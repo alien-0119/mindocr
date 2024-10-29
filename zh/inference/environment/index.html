@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#offline-inference-environment-installation" class="md-skip">
           跳转至
         </a>
       
@@ -1257,47 +1257,47 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#offline-inference-environment-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      离线推理环境准备
+      Offline Inference Environment Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="离线推理环境准备">
+    <nav class="md-nav" aria-label="Offline Inference Environment Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#1" class="md-nav__link">
+  <a href="#1-version-matching-table" class="md-nav__link">
     <span class="md-ellipsis">
-      1. 版本配套关系表
+      1. Version Matching Table
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#2-ascend" class="md-nav__link">
+  <a href="#2-ascend-environment-installation" class="md-nav__link">
     <span class="md-ellipsis">
-      2. Ascend 环境安装
+      2. Ascend Environment Installation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="2. Ascend 环境安装">
+    <nav class="md-nav" aria-label="2. Ascend Environment Installation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#install" class="md-nav__link">
     <span class="md-ellipsis">
-      安装
+      Install
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#configure-environment-variables" class="md-nav__link">
     <span class="md-ellipsis">
-      配置环境变量
+      Configure Environment Variables
     </span>
   </a>
   
@@ -1309,27 +1309,27 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3-mindspore" class="md-nav__link">
+  <a href="#3-mindspore-install" class="md-nav__link">
     <span class="md-ellipsis">
-      3. MindSpore 安装
+      3. MindSpore Install
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#4-mindspore-lite" class="md-nav__link">
+  <a href="#4-mindspore-lite-install" class="md-nav__link">
     <span class="md-ellipsis">
-      4. MindSpore Lite 安装
+      4. MindSpore Lite Install
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#5-mindocr" class="md-nav__link">
+  <a href="#5-mindocr-install" class="md-nav__link">
     <span class="md-ellipsis">
-      5. 安装 MindOCR
+      5. MindOCR Install
     </span>
   </a>
   
@@ -1355,7 +1355,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/inference/environment.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/inference/environment.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1364,7 +1364,7 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/inference/environment.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/inference/environment.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1373,12 +1373,12 @@
 
   <h1>Environment</h1>
 
-<h2 id="_1">离线推理环境准备<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>本教程仅涉及MindOCR在Atlas 300系列推理芯片离线推理环境准备。</p>
-<h3 id="1">1. 版本配套关系表<a class="headerlink" href="#1" title="Permanent link">&para;</a></h3>
-<p>搭建推理环境请参考版本配套关系，推荐使用MindSpore 2.2.14版本进行推理。</p>
-<p>不同芯片型号 Ascend Driver和 Firmware使用的版本不一定一样，请参考<a href="https://www.hiascend.com/developer/download/community/result?module=cann&amp;cann=7.0.0.beta1">CANN 包</a> 版本下载对应芯片使用的<a href="https://www.hiascend.com/zh/hardware/firmware-drivers/community?product=2&amp;model=3&amp;cann=7.0.0.beta1&amp;driver=1.0.22.alpha">Driver和 Firmware</a>。</p>
-<p>下面我们以 Atlas 300I 推理卡 (Model: 3010) X86 CPU架构为例介绍安装版本匹配关系，下面的安装章节也会以这个场景为例，其他芯片及CPU架构可参考这个过程进行安装。</p>
+<h2 id="offline-inference-environment-installation">Offline Inference Environment Installation<a class="headerlink" href="#offline-inference-environment-installation" title="Permanent link">&para;</a></h2>
+<p>This tutorial only covers the environment installation of MindOCR for offline inference on Atlas 300 series inference devices.</p>
+<h3 id="1-version-matching-table">1. Version Matching Table<a class="headerlink" href="#1-version-matching-table" title="Permanent link">&para;</a></h3>
+<p>Please refer to the version matching table when setting up the inference environment. It is recommended to use MindSpore 2.2.14 for inference.</p>
+<p>The version of Driver and Firmware is different for different chips. Please download the matched <a href="https://www.hiascend.com/en/hardware/firmware-drivers/community?product=2&amp;model=3&amp;cann=7.0.0.beta1&amp;driver=1.0.22.alpha">driver and firmware</a> according to the <a href="https://www.hiascend.com/en/software/cann/community">CANN package</a> version.</p>
+<p>Now, we taking Atlas 300I Inference Card (Model: 3010) run on x86 CPU as an example, introduce version matching relationship. The following installation version is also introduced using this as an example.</p>
 <table>
 <thead>
 <tr>
@@ -1399,10 +1399,10 @@
 </tr>
 </tbody>
 </table>
-<p><strong>其他MindSpore and Ascend 软件匹配关系请参考 <a href="https://www.mindspore.cn/install">MindSpore 安装</a>。</strong></p>
-<h3 id="2-ascend">2. Ascend 环境安装<a class="headerlink" href="#2-ascend" title="Permanent link">&para;</a></h3>
-<p>昇腾AI处理器配套软件包有两个版本，商用版和社区版。商用版仅供商业客户使用，下载受限；社区版本可自由下载，以下例子均使用社区版本。</p>
-<p>本章使用MindSpore2.2.14配套的Ascend配套软件包，其他版本请参考<a href="https://www.mindspore.cn/install#安装昇腾ai处理器配套软件包">安装昇腾AI处理器配套软件包</a> 小节进行安装。</p>
+<p><strong>Other MindSpore and Ascend software version matching please refer to <a href="https://www.mindspore.cn/install">MindSpore Install</a>.</strong></p>
+<h3 id="2-ascend-environment-installation">2. Ascend Environment Installation<a class="headerlink" href="#2-ascend-environment-installation" title="Permanent link">&para;</a></h3>
+<p>There are two versions of the Ascend software package, the commercial edition and the community edition. The commercial edition is only for commercial customers and download is restricted; The community edition can be freely downloaded, and the following examples all use the community edition.</p>
+<p>This example uses the Ascend package that comes with MindSpore 2.2.14, other MindSpore version please refer to <a href="https://www.mindspore.cn/install/en#installing-ascend-ai-processor-software-package">Installing Ascend AI processor software package</a>.</p>
 <table>
 <thead>
 <tr>
@@ -1432,14 +1432,14 @@
 <td><a href="https://www.hiascend.com/developer/download/community/result?module=cann&amp;cann=7.0.0.beta1">link</a></td>
 </tr>
 <tr>
-<td>CANN kernels(可选)</td>
+<td>CANN kernels(Optional)</td>
 <td>7.0.0.beta1</td>
 <td>Ascend-cann-kernels-310p_7.0.0_linux.run</td>
 <td><a href="https://www.hiascend.com/developer/download/community/result?module=cann&amp;cann=7.0.0.beta1">link</a></td>
 </tr>
 </tbody>
 </table>
-<h4 id="_2">安装<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
+<h4 id="install">Install<a class="headerlink" href="#install" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># Note: When installing a new machine, install the driver first and then the firmware.</span>
 <span class="c1"># When the scenario of upgrade, install the firmware first and then the driver.</span>
 bash<span class="w"> </span>A300-3010-npu-driver_23.0.0_linux-x86_64.run<span class="w"> </span>--full
@@ -1453,16 +1453,16 @@ pip<span class="w"> </span>install<span class="w"> </span>/usr/local/Ascend/nnae
 pip<span class="w"> </span>install<span class="w"> </span>/usr/local/Ascend/nnae/latest/lib64/hccl-*-py3-none-any.whl
 reboot
 </code></pre></div>
-<h4 id="_3">配置环境变量<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h4>
+<h4 id="configure-environment-variables">Configure Environment Variables<a class="headerlink" href="#configure-environment-variables" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="nb">source</span><span class="w"> </span>/usr/local/Ascend/nnae/set_env.sh
 </code></pre></div>
-<h3 id="3-mindspore">3. MindSpore 安装<a class="headerlink" href="#3-mindspore" title="Permanent link">&para;</a></h3>
+<h3 id="3-mindspore-install">3. MindSpore Install<a class="headerlink" href="#3-mindspore-install" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span><span class="nv">mindspore</span><span class="o">==</span><span class="m">2</span>.2.14
 
-<span class="c1"># 查看版本号，离线推理MindSpore仅使用CPU</span>
+<span class="c1"># Check version number, offline inference MindSpore only uses CPU</span>
 python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import mindspore;mindspore.set_context(device_target=&#39;CPU&#39;);mindspore.run_check()&quot;</span>
 </code></pre></div>
-<h3 id="4-mindspore-lite">4. MindSpore Lite 安装<a class="headerlink" href="#4-mindspore-lite" title="Permanent link">&para;</a></h3>
+<h3 id="4-mindspore-lite-install">4. MindSpore Lite Install<a class="headerlink" href="#4-mindspore-lite-install" title="Permanent link">&para;</a></h3>
 <table>
 <thead>
 <tr>
@@ -1474,36 +1474,36 @@ python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;i
 </thead>
 <tbody>
 <tr>
-<td>推理工具包</td>
+<td>Inference Toolkit</td>
 <td>2.2.14</td>
 <td>mindspore-lite-2.2.14-linux-{arch}.tar.gz</td>
 <td><a href="https://www.mindspore.cn/lite/docs/zh-CN/master/use/downloads.html#2-2-14">link</a></td>
 </tr>
 <tr>
-<td>Python 接口 Wheel安装包</td>
+<td>Python Wheel</td>
 <td>2.2.14</td>
 <td>mindspore_lite-2.2.14-{python_version}-linux_{arch}.whl</td>
 <td><a href="https://www.mindspore.cn/lite/docs/zh-CN/master/use/downloads.html#2-2-14">link</a></td>
 </tr>
 </tbody>
 </table>
-<p>推理工具包安装时直接解压即可，并注意设置环境变量：</p>
+<p>Unzip the inference toolkit and pay attention to setting environment variables:</p>
 <div class="highlight"><pre><span></span><code>tar<span class="w"> </span>-xvf<span class="w"> </span>mindspore-lite-2.2.14-linux-<span class="o">{</span>arch<span class="o">}</span>.tar.gz
 <span class="nb">cd</span><span class="w"> </span>mindspore-lite-2.2.14-linux-<span class="o">{</span>arch<span class="o">}</span>/
-<span class="nb">export</span><span class="w"> </span><span class="nv">LITE_HOME</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="w">    </span><span class="c1"># 推理工具tar包解压后实际路径</span>
+<span class="nb">export</span><span class="w"> </span><span class="nv">LITE_HOME</span><span class="o">=</span><span class="si">${</span><span class="nv">PWD</span><span class="si">}</span><span class="w">    </span><span class="c1"># The actual path after extracting the tar package</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">LD_LIBRARY_PATH</span><span class="o">=</span><span class="nv">$LITE_HOME</span>/runtime/lib:<span class="nv">$LITE_HOME</span>/runtime/third_party/dnnl:<span class="nv">$LITE_HOME</span>/tools/converter/lib:<span class="nv">$LD_LIBRARY_PATH</span>
 <span class="nb">export</span><span class="w"> </span><span class="nv">PATH</span><span class="o">=</span><span class="nv">$LITE_HOME</span>/tools/converter/converter:<span class="nv">$LITE_HOME</span>/tools/benchmark:<span class="nv">$PATH</span>
 </code></pre></div>
-<p>如果使用python接口，使用pip安装所需的whl包</p>
+<p>If interface with python, install the required whl package using pip.</p>
 <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>mindspore_lite-2.2.14-<span class="o">{</span>python_version<span class="o">}</span>-linux_<span class="o">{</span>arch<span class="o">}</span>.whl
 </code></pre></div>
-<h3 id="5-mindocr">5. 安装 MindOCR<a class="headerlink" href="#5-mindocr" title="Permanent link">&para;</a></h3>
+<h3 id="5-mindocr-install">5. MindOCR Install<a class="headerlink" href="#5-mindocr-install" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/mindspore-lab/mindocr.git
 <span class="nb">cd</span><span class="w"> </span>mindocr
 pip<span class="w"> </span>install<span class="w"> </span>-e<span class="w"> </span>.
 </code></pre></div>
 <blockquote>
-<p>使用 <code>-e</code> 代表可编辑模式，可以帮助解决潜在的模块导入问题。</p>
+<p>Using '- e' to enter editable mode, help solve import issues.</p>
 </blockquote>
 
 

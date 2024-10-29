@@ -1434,7 +1434,6 @@
 
   <h1>Customize Data Transformation</h1>
 
-<!-- BEGIN INCLUDE ../../../mindocr/data/transforms/README.md '&lt;!--start--&gt;' '&lt;!--end--&gt;' -->
 <h2 id="guideline-for-developing-your-transformation">Guideline for Developing Your Transformation<a class="headerlink" href="#guideline-for-developing-your-transformation" title="Permanent link">&para;</a></h2>
 <h3 id="writing-guideline">Writing Guideline<a class="headerlink" href="#writing-guideline" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1478,7 +1477,6 @@
 <ol>
 <li>For spatial transformation operaions that will be used in text detection inference or evaluation (e.g. determinstic resize, scale), please record the space transformation information in <code>shape_list</code>. Otherwise, the postprocessing method won't be able to map the results back to the orignal image space. On how to record <code>shape_list</code>, please refer to <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/data/transforms/det_transforms.py">DetResize</a>.</li>
 </ol>
-<!-- END INCLUDE -->
 
 
 

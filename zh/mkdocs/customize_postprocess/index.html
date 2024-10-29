@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#guideline-for-postprocessing-module" class="md-skip">
           跳转至
         </a>
       
@@ -1177,37 +1177,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#guideline-for-postprocessing-module" class="md-nav__link">
     <span class="md-ellipsis">
-      后处理模块指南
+      Guideline for Postprocessing Module
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="后处理模块指南">
+    <nav class="md-nav" aria-label="Guideline for Postprocessing Module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#common-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      通用协议
+      Common Protocols
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#detection-postprocessing-api-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      检测后处理API协议
+      Detection Postprocessing API Protocols
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api_1" class="md-nav__link">
+  <a href="#recognition-postprocessing-api-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      识别后处理API协议
+      Recognition Postprocessing API Protocols
     </span>
   </a>
   
@@ -1362,37 +1362,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#guideline-for-postprocessing-module" class="md-nav__link">
     <span class="md-ellipsis">
-      后处理模块指南
+      Guideline for Postprocessing Module
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="后处理模块指南">
+    <nav class="md-nav" aria-label="Guideline for Postprocessing Module">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#common-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      通用协议
+      Common Protocols
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api" class="md-nav__link">
+  <a href="#detection-postprocessing-api-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      检测后处理API协议
+      Detection Postprocessing API Protocols
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#api_1" class="md-nav__link">
+  <a href="#recognition-postprocessing-api-protocols" class="md-nav__link">
     <span class="md-ellipsis">
-      识别后处理API协议
+      Recognition Postprocessing API Protocols
     </span>
   </a>
   
@@ -1418,7 +1418,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/mkdocs/customize_postprocess.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/mkdocs/customize_postprocess.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1427,7 +1427,7 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/mkdocs/customize_postprocess.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/mkdocs/customize_postprocess.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1436,92 +1436,93 @@
 
   <h1>定制化后处理方法</h1>
 
-<!-- BEGIN INCLUDE ../../../mindocr/postprocess/README_CN.md '&lt;!--start--&gt;' '&lt;!--end--&gt;' -->
-<h2 id="_1">后处理模块指南<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<h3 id="_2">通用协议<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<h2 id="guideline-for-postprocessing-module">Guideline for Postprocessing Module<a class="headerlink" href="#guideline-for-postprocessing-module" title="Permanent link">&para;</a></h2>
+<h3 id="common-protocols">Common Protocols<a class="headerlink" href="#common-protocols" title="Permanent link">&para;</a></h3>
 <ol>
-<li>每个后处理模块是一个**class**，具有可调用的函数。</li>
-<li>后处理功能的输入是网络预测和附加数据信息（如果需要）。</li>
-<li>后处理功能的输出为总是一个dict，其中键为字段名，如文本检测中多边形为 'polys'，文本检测为'text'。</li>
+<li>Each postprocessing module is a <strong>class</strong> with a callable function.</li>
+<li>The input to the postprocessing function is network prediction and additional data information if needed.</li>
+<li>The output of the postprocessing function is a alwasy a dict, where the key is a field name, such as 'polys' for polygons in text detection, 'text' for text detection.</li>
 </ol>
-<h3 id="api">检测后处理API协议<a class="headerlink" href="#api" title="Permanent link">&para;</a></h3>
+<h3 id="detection-postprocessing-api-protocols">Detection Postprocessing API Protocols<a class="headerlink" href="#detection-postprocessing-api-protocols" title="Permanent link">&para;</a></h3>
 <ol>
-<li>class命名：Det{Method}Postprocess</li>
+<li>
+<p>class naming: Det{Method}Postprocess</p>
+</li>
 <li>
 <p>class  <code>__init__()</code> args:</p>
 <ul>
-<li><code>box_type</code> (string):对于四边形和多边形文本表示，选项为["quad"，"polys"]。</li>
-<li><code>rescale_fields</code> (List[str]='polys'): 指示输出dict中的哪些字段将被重新缩放到原始图像空间。字段名称："polys"</li>
+<li><code>box_type</code> (string): options are ["quad', 'polys"] for quadriateral and polygon text representation.</li>
+<li><code>rescale_fields</code> (List[str]='polys'): indicates which fields in the output dict will be rescaled to the original image space. Field name: "polys" for polygons</li>
 </ul>
 </li>
 <li>
-<p><code>__call__()</code>方法：如果继承自<code>DetBasePostprocess</code>，则不需要在Postproc class中实现此方法。
-    后处理的执行项，对变换后的图像空间进行网络预测后处理，以获取文本框（通过<code>self._postprocess()</code>函数），然后将其重新缩放回原始图像空间（通过<code>self.rescale()</code>函数）。</p>
+<p><code>__call__()</code> method: If inherit from <code>DetBasePostprocess</code>DetBasePostprocess<code>`, you don't need to implement this method in your Postproc. class.
+    Execution entry for postprocessing, which postprocess network prediction on the transformed image space to get text boxes (by</code>self._postprocess()<code>function) and then rescale them back to the original image space (by</code>self.rescale()` function).</p>
 <ul>
 <li>
-<p>输入参数：</p>
+<p>Input args:</p>
 <ul>
-<li><code>pred</code> (Union[Tensor, Tuple[Tensor]]): 输入批次数据的网络预测，shape [batch_size, ...]</li>
-<li><code>shape_list</code> (Union[List, np.ndarray, ms.Tensor]): 批处理中每个图像的形状和比例信息，shape [batch_size, 4]。每个长度为4的内部数组是[src_h, src_w, scale_h, scale_w]，其中src_h和src_w是原始图像的高度和宽度，scale_h和scale_w分别是图像大小调整后的比例。</li>
-<li><code>**kwargs</code>: 扩展的参数</li>
+<li><code>pred</code> (Union[Tensor, Tuple[Tensor]]): network prediction for input batch data, shape [batch_size, ...]</li>
+<li><code>shape_list</code> (Union[List, np.ndarray, ms.Tensor]): shape and scale info for each image in the batch, shape [batch_size, 4]. Each internal array of length 4 is [src_h, src_w, scale_h, scale_w], where src_h and src_w are height and width of the original image, and scale_h and scale_w are their scale ratio after image resizing respectively.</li>
+<li><code>**kwargs</code>: args for extension</li>
 </ul>
 </li>
 <li>
-<p>Return：检测结果作为字典，包含以下键</p>
+<p>Return: detection result as a dictionary with the following keys</p>
 <ul>
-<li><code>polys</code> (List[List[np.ndarray]): 在**original**图像空间上映射的预测多边形，shape [batch_size, num_polygons, num_points, 2]。如果<code>box_type</code>为'quad'，num_points=4，则内部np.ndarray的shape [4, 2]</li>
-<li><code>scores</code> (List[float]): 预测多边形、shape (batch_size, num_polygons)的置信度得分</li>
-</ul>
-</li>
-</ul>
-</li>
-<li>
-<p><code>_postprocess()</code>方法：如果继承自<code>DetBasePostprocess</code>，请在此处实现后处理方法
-    后处理网络预测以获取转换后图像空间上的文本框（将在__call__函数中重新缩放回原始图像空间）</p>
-<ul>
-<li>
-<p>输入参数：</p>
-<ul>
-<li><code>pred</code> (Union[Tensor, Tuple[Tensor]]): 输入批次数据的网络预测，shape [batch_size, ...]</li>
-<li><code>**kwargs</code>: 扩展的参数</li>
-</ul>
-</li>
-<li>
-<p>Return：带键字典的后处理结果：</p>
-<ul>
-<li><code>polys</code> (List[List[np.ndarray]): 在**transformed**（即正常调整大小）图像空间上的预测多边形，shape (batch_size, num_polygons, num_points, 2)。如果<code>box_type</code>为"quad"，则num_points=4。</li>
-<li><code>scores</code> (List[float]): 预测多边形、shape (batch_size, num_polygons)的置信度得分</li>
-</ul>
-</li>
-<li>
-<p>注意事项：</p>
-<ul>
-<li>请将<code>pred</code>强制转换为实现中所需的类型。有些后处理步骤使用mindspore.nn中的ops，并且更适配张量类型，而有些步骤更适配其他库中所需的np.ndarray类型。</li>
-<li><code>_postprocess()</code> <strong>NOT round**返回文本框<code>polys</code>为整数，因为它们将被重新设置，然后在最后取整。提前舍入将导致多边形重缩放中的较大错误，并导致**评估性能下降</strong>，尤其是在小数据集上。</li>
+<li><code>polys</code> (List[List[np.ndarray]): predicted polygons mapped on the <strong>original</strong> image space, shape [batch_size, num_polygons, num_points, 2]. If <code>box_type</code> is 'quad', num_points=4, and the internal np.ndarray is of shape [4, 2]</li>
+<li><code>scores</code> (List[float]): confidence scores for the predicted polygons, shape (batch_size, num_polygons)</li>
 </ul>
 </li>
 </ul>
 </li>
 <li>
-<p>关于将多边形重缩放回原始图像空间</p>
+<p><code>_postprocess()</code> method: Implement your postprocessing method here if inherit from <code>DetBasePostprocess</code>
+    Postprocess network prediction to get text boxes on the transformed image space (which will be rescaled back to original image space in <strong>call</strong> function)</p>
 <ul>
-<li>重缩放步骤对于公平评估是必要的，并且在推理中从原始图像裁剪文本区域时也是必要的。</li>
-<li>启用重新缩放以进行评估<ol>
-<li>在模型YAML配置文件的<code>eval.dataset.output_columns</code>中增加"shape_list"。</li>
-<li>确保<code>rescale_fields</code>不是None（默认值为[“polys”]）</li>
+<li>
+<p>Input args:</p>
+<ul>
+<li><code>pred</code> (Union[Tensor, Tuple[Tensor]]): network prediction for input batch data, shape [batch_size, ...]</li>
+<li><code>**kwargs</code>: args for extension</li>
+</ul>
+</li>
+<li>
+<p>Return: postprocessing result as a dict with keys:</p>
+<ul>
+<li><code>polys</code> (List[List[np.ndarray]): predicted polygons on the <strong>transformed</strong> (i.e. resized normally) image space, of shape (batch_size, num_polygons, num_points, 2). If <code>box_type</code> is 'quad', num_points=4.</li>
+<li><code>scores</code> (np.ndarray): confidence scores for the predicted polygons, shape (batch_size, num_polygons)</li>
+</ul>
+</li>
+<li>
+<p>Notes:</p>
+<ul>
+<li>Please cast <code>pred</code> to the type you need in your implementation. Some postprocesssing steps use ops from mindspore.nn and prefer Tensor type, while some steps prefer np.ndarray type required in other libraries.</li>
+<li><code>_postprocess()</code> should <strong>NOT round</strong> the text box <code>polys</code> to integer in return, because they will be recaled and then rounded in the end. Rounding early will cause larger error in polygon rescaling and results in <strong>evaluation performance degradation</strong>, especially on small datasets.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>About rescaling the polygons back to the original image spcae</p>
+<ul>
+<li>The rescaling step is necessary for a fair evaluation and is needed in cropping text regions from the orginal image in inference.</li>
+<li>To enable rescaling for evaluation<ol>
+<li>add "shape_list" to the <code>eval.dataset.output_columns</code> in the YAML config file of the model.</li>
+<li>make sure <code>rescale_fields</code> is not None (default is ["polys"])</li>
 </ol>
 </li>
-<li>要在推理中启用重缩放，请执行以下操作：<ol>
-<li>直接解析<code>shape_list</code>（数据加载后从数据["shape_list"]获取）到后处理函数。
-    它与<code>rescale_fields</code>一起工作，以决定是否进行重缩放以及要重缩放哪些字段。</li>
+<li>To enable rescaling in inference:<ol>
+<li>directly parse <code>shape_list</code> (which is got from data["shape_list"] after data loading) to the postprocessing function.
+ It works with <code>rescale_fields</code> to decide whether to do rescaling and which fields are to be rescaled.</li>
 </ol>
 </li>
-<li><code>shape_list</code>最初记录在图像调整大小转换中，例如<code>DetResize</code>。</li>
+<li><code>shape_list</code> is originally recorded in image resize transformation, such as <code>DetResize</code>.</li>
 </ul>
 </li>
 </ol>
-<p><strong>示例代码：</strong> <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/det_base_postprocess.py">DetBasePostprocess</a>和<a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/det_db_postprocess.py">DetDBPostprocess</a></p>
-<h3 id="api_1">识别后处理API协议<a class="headerlink" href="#api_1" title="Permanent link">&para;</a></h3>
+<p><strong>Example Code:</strong> <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/det_base_postprocess.py">DetBasePostprocess</a> and <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/det_db_postprocess.py">DetDBPostprocess</a></p>
+<h3 id="recognition-postprocessing-api-protocols">Recognition Postprocessing API Protocols<a class="headerlink" href="#recognition-postprocessing-api-protocols" title="Permanent link">&para;</a></h3>
 <ol>
 <li>
 <p>class  <code>__init__()</code> should support the follow args:
@@ -1529,7 +1530,7 @@
         - use_space_char
         - blank_at_last
         - lower
-请参考API文档<a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/rec_postprocess.py">RecCTCLabelDecode</a>用于参数说明。</p>
+    Please see the API docs in <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/rec_postprocess.py">RecCTCLabelDecode</a> for argument illustration.</p>
 </li>
 <li>
 <p><code>__call__()</code> method:</p>
@@ -1551,8 +1552,7 @@
 </ul>
 </li>
 </ol>
-<p><strong>示例代码：</strong><a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/rec_postprocess.py">RecCTCLabelDecode</a></p>
-<!-- END INCLUDE -->
+<p><strong>Example code:</strong> <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/rec_postprocess.py">RecCTCLabelDecode</a></p>
 
 
 

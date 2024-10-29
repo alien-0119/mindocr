@@ -18,7 +18,7 @@
     
     
       
-        <title>COCO-Text 数据集 - MindOCR Docs</title>
+        <title>COCO-Text Dataset - MindOCR Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#coco-text" class="md-skip">
+        <a href="#coco-text-dataset" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              COCO-Text 数据集
+              COCO-Text Dataset
             
           </span>
         </div>
@@ -1259,28 +1259,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#data-downloading" class="md-nav__link">
     <span class="md-ellipsis">
-      数据集下载
+      Data Downloading
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#data-preparation" class="md-nav__link">
     <span class="md-ellipsis">
-      数据准备
+      Data Preparation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="数据准备">
+    <nav class="md-nav" aria-label="Data Preparation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#for-detection-task" class="md-nav__link">
     <span class="md-ellipsis">
-      检测任务
+      For Detection Task
     </span>
   </a>
   
@@ -1306,7 +1306,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/datasets/cocotext.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/datasets/cocotext.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1315,39 +1315,39 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/datasets/cocotext.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/datasets/cocotext.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="coco-text">COCO-Text 数据集<a class="headerlink" href="#coco-text" title="Permanent link">&para;</a></h1>
-<h2 id="_1">数据集下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>COCO-Text数据集<a href="https://rrc.cvc.uab.es/?ch=5">官网</a></p>
-<p>数据集图像和JSON标注文件<code>annotations v1.4 JSON</code>可从<a href="https://rrc.cvc.uab.es/?ch=5&amp;com=downloads">此处</a>下载。</p>
+<h1 id="coco-text-dataset">COCO-Text Dataset<a class="headerlink" href="#coco-text-dataset" title="Permanent link">&para;</a></h1>
+<h2 id="data-downloading">Data Downloading<a class="headerlink" href="#data-downloading" title="Permanent link">&para;</a></h2>
+<p><a href="https://rrc.cvc.uab.es/?ch=5">Official Website</a></p>
+<p>The COCO-Text images dataset and the annotations (in JSON format) <code>annotations v1.4 JSON</code> can be downloaded from this <a href="https://rrc.cvc.uab.es/?ch=5&amp;com=downloads">link</a>.</p>
 <blockquote>
-<p>注意：在下载之前，请先注册一个账号。</p>
+<p>Note: Please register an account to download this dataset.</p>
 </blockquote>
-<p>请从上述网站下载数据并解压缩文件。解压文件后，数据结构应该是这样的：</p>
+<p>After downloading the images and annotations, unzip the files, after which the directory structure should be like as follows (ignoring the archive files):
 <div class="highlight"><pre><span></span><code>COCO-Text
   |--- train_images
   |    |--- COCO_train2014_000000000036.jpg
   |    |--- COCO_train2014_000000000064.jpg
   |    |--- ...
   |--- COCO_Text.json
-</code></pre></div>
-<h2 id="_2">数据准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">检测任务<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>要准备用于文本检测的数据，您可以运行以下命令：</p>
+</code></pre></div></p>
+<h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
+<h3 id="for-detection-task">For Detection Task<a class="headerlink" href="#for-detection-task" title="Permanent link">&para;</a></h3>
+<p>To prepare the data for text detection, you can run the following commands:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--dataset_name<span class="w"> </span>cocotext<span class="w"> </span>--task<span class="w"> </span>det<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--image_dir<span class="w"> </span>path/to/COCO-Text/train_images/<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--label_dir<span class="w"> </span>path/to/COCO-Text/COCO_Text.json<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--output_path<span class="w"> </span>path/to/COCO-Text/det_gt.txt
 </code></pre></div>
-<p>运行后，在文件夹<code>COCO-Text/</code>下会生成注释文件<code>det_gt.txt</code>。</p>
-<p><a href="../converters/">返回ataset converters</a></p>
+<p>The generated standard annotation file <code>det_gt.txt</code> will now be placed under the folder <code>COCO-Text/</code>.</p>
+<p><a href="../converters/">Back to dataset converters</a></p>
 
 
 

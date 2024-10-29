@@ -1618,7 +1618,6 @@
   
 
 
-<!-- BEGIN INCLUDE ../../../tools/infer/text/README.md '&lt;!--start--&gt;' '&lt;!--end--&gt;' -->
 <h1 id="mindocr-online-inference">MindOCR Online Inference<a class="headerlink" href="#mindocr-online-inference" title="Permanent link">&para;</a></h1>
 <p><strong>About Online Inference:</strong> Online inference is to infer based on the native MindSpore framework by loading the model checkpoint file then running prediction with MindSpore APIs.</p>
 <p>Compared to offline inference (which is implemented in <code>deploy/py_infer</code> in MindOCR), online inferece does not require model conversion for target platforms and can run directly on the training devices (e.g. Ascend 910). But it requires installing the heavy AI framework and the model is not optimized for deployment.</p>
@@ -1909,7 +1908,6 @@ img_2.jpg   [{&quot;transcription&quot;: &quot;apple&quot;, &quot;points&quot;: 
 <h3 id="postproprocess">Postproprocess<a class="headerlink" href="#postproprocess" title="Permanent link">&para;</a></h3>
 <p>Similar to preprocessing, the postprocessing method for each algorithm can vary. The postprocessing method for each algorithm is defined in <code>tools/infer/text/postprocess.py</code>.</p>
 <p>If you find the default postprocessing method or hyper-params does not meet the model need, please extend the if-else conditions or add a new key-value pair  to the <code>optimal_hparam</code> dict in <code>tools/infer/text/postprocess.py</code>, where the key is an algorithm name and the value is the hyper-param setting.</p>
-<!-- END INCLUDE -->
 
 
 

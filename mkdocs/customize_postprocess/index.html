@@ -1434,7 +1434,6 @@
 
   <h1>Customize Postprocessing Method</h1>
 
-<!-- BEGIN INCLUDE ../../../mindocr/postprocess/README.md '&lt;!--start--&gt;' '&lt;!--end--&gt;' -->
 <h2 id="guideline-for-postprocessing-module">Guideline for Postprocessing Module<a class="headerlink" href="#guideline-for-postprocessing-module" title="Permanent link">&para;</a></h2>
 <h3 id="common-protocols">Common Protocols<a class="headerlink" href="#common-protocols" title="Permanent link">&para;</a></h3>
 <ol>
@@ -1455,8 +1454,8 @@
 </ul>
 </li>
 <li>
-<p><code>__call__()</code> method: If inherit from <code>DetBasePostprocess</code>, you don't need to implement this method in your Postproc. class.
-    Execution entry for postprocessing, which postprocess network prediction on the transformed image space to get text boxes (by <code>self._postprocess()</code> function) and then rescale them back to the original image space (by <code>self.rescale()</code> function).</p>
+<p><code>__call__()</code> method: If inherit from <code>DetBasePostprocess</code>DetBasePostprocess<code>`, you don't need to implement this method in your Postproc. class.
+    Execution entry for postprocessing, which postprocess network prediction on the transformed image space to get text boxes (by</code>self._postprocess()<code>function) and then rescale them back to the original image space (by</code>self.rescale()` function).</p>
 <ul>
 <li>
 <p>Input args:</p>
@@ -1552,7 +1551,6 @@
 </li>
 </ol>
 <p><strong>Example code:</strong> <a href="https://github.com/mindspore-lab/mindocr/blob/main/mindocr/postprocess/rec_postprocess.py">RecCTCLabelDecode</a></p>
-<!-- END INCLUDE -->
 
 
 

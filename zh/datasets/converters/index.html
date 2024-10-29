@@ -78,7 +78,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#_1" class="md-skip">
+        <a href="#text-detectionspotting-annotation" class="md-skip">
           跳转至
         </a>
       
@@ -675,37 +675,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#text-detectionspotting-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      文本检测/端到端文本检测
+      Text Detection/Spotting Annotation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#text-recognition-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      文本识别
+      Text Recognition Annotation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="文本识别">
+    <nav class="md-nav" aria-label="Text Recognition Annotation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#common-dataset-format" class="md-nav__link">
     <span class="md-ellipsis">
-      通用数据格式
+      Common Dataset Format
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lmdb" class="md-nav__link">
+  <a href="#lmdb-dataset-format" class="md-nav__link">
     <span class="md-ellipsis">
-      LMDB数据格式
+      LMDB Dataset Format
     </span>
   </a>
   
@@ -1362,37 +1362,37 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#_1" class="md-nav__link">
+  <a href="#text-detectionspotting-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      文本检测/端到端文本检测
+      Text Detection/Spotting Annotation
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#_2" class="md-nav__link">
+  <a href="#text-recognition-annotation" class="md-nav__link">
     <span class="md-ellipsis">
-      文本识别
+      Text Recognition Annotation
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="文本识别">
+    <nav class="md-nav" aria-label="Text Recognition Annotation">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#_3" class="md-nav__link">
+  <a href="#common-dataset-format" class="md-nav__link">
     <span class="md-ellipsis">
-      通用数据格式
+      Common Dataset Format
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lmdb" class="md-nav__link">
+  <a href="#lmdb-dataset-format" class="md-nav__link">
     <span class="md-ellipsis">
-      LMDB数据格式
+      LMDB Dataset Format
     </span>
   </a>
   
@@ -1418,7 +1418,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/datasets/converters.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/datasets/converters.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1427,7 +1427,7 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/datasets/converters.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/datasets/converters.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1436,10 +1436,10 @@
 
   <h1>数据准备</h1>
 
-<p>本文档展示了如何将OCR数据集的标注文件（不包括LMDB）转换为通用格式以进行模型训练。</p>
-<p>您也可以参考 <a href="https://github.com/mindspore-lab/mindocr/blob/main/tools/convert_datasets.sh"><code>convert_datasets.sh</code></a>。这是将给定目录下所有数据集的标注文件转换为通用格式的Shell 脚本。</p>
+<p>This document shows how to convert ocr annotation to the general format (not including LMDB) for model training.</p>
+<p>You may also refer to <a href="https://github.com/mindspore-lab/mindocr/blob/main/tools/convert_datasets.sh"><code>convert_datasets.sh</code></a> which is a quick solution for converting annotation files of all datasets under a given directory.</p>
 <details open="open">
-<summary>要下载OCR数据集并将其转换为所需的数据格式，请参阅以下介绍。</summary>
+<summary>To download and convert OCR datasets to the required data format, please refer to these instructions.</summary>
 <ul>
 <li><a href="../borndigital/">Born-Digital Images</a></li>
 <li><a href="../casia10k/">CASIA-10K</a></li>
@@ -1464,11 +1464,11 @@
 <li><a href="../totaltext/">Total-Text</a></li>
 </ul>
 </details>
-<h2 id="_1">文本检测/端到端文本检测<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
-<p>转换后的标注文件格式应为：
+<h2 id="text-detectionspotting-annotation">Text Detection/Spotting Annotation<a class="headerlink" href="#text-detectionspotting-annotation" title="Permanent link">&para;</a></h2>
+<p>The format of the converted annotation file should follow:
 <div class="highlight"><pre><span></span><code>img_61.jpg\t[{&quot;transcription&quot;: &quot;MASA&quot;, &quot;points&quot;: [[310, 104], [416, 141], [418, 216], [312, 179]]}, {...}]
 </code></pre></div></p>
-<p>以ICDAR2015（ic15）数据集为例，要将ic15数据集转换为所需的格式，请运行：</p>
+<p>Taking ICDAR2015 (ic15) dataset as an example, to convert the ic15 dataset to the required format, please run</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># convert training anotation</span>
 python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--dataset_name<span class="w">  </span>ic15<span class="w"> </span><span class="se">\</span>
@@ -1485,17 +1485,17 @@ python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"
 <span class="w">        </span>--label_dir<span class="w"> </span>/path/to/ic15/det/test/ch4_test_localization_transcription_gt<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output_path<span class="w"> </span>/path/to/ic15/det/test/det_gt.txt
 </code></pre></div>
-<h2 id="_2">文本识别<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
-<h3 id="_3">通用数据格式<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
-<p>文本识别数据集的标注格式如下：</p>
-<p><div class="highlight"><pre><span></span><code>word_7.png  fusionopolis
+<h2 id="text-recognition-annotation">Text Recognition Annotation<a class="headerlink" href="#text-recognition-annotation" title="Permanent link">&para;</a></h2>
+<h3 id="common-dataset-format">Common Dataset Format<a class="headerlink" href="#common-dataset-format" title="Permanent link">&para;</a></h3>
+<p>The annotation format for text recognition dataset follows
+<div class="highlight"><pre><span></span><code>word_7.png  fusionopolis
 word_8.png  fusionopolis
 word_9.png  Reserve
 word_10.png CAUTION
 word_11.png citi
 </code></pre></div>
-请注意，图像名称和文本标签以<code>\t</code>分隔。</p>
-<p>要转换标注文件，请运行：
+Note that image name and text label are seperated by \t.</p>
+<p>To convert, please run:
 <div class="highlight"><pre><span></span><code><span class="c1"># convert training anotation</span>
 python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--dataset_name<span class="w">  </span>ic15<span class="w"> </span><span class="se">\</span>
@@ -1510,16 +1510,16 @@ python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"
 <span class="w">        </span>--label_dir<span class="w"> </span>/path/to/ic15/rec/ch4_test_word_images_gt/gt.txt<span class="w"> </span><span class="se">\</span>
 <span class="w">        </span>--output_path<span class="w"> </span>/path/to/ic15/rec/ch4_test_word_images_gt/rec_gt.txt
 </code></pre></div>
-<h3 id="lmdb">LMDB数据格式<a class="headerlink" href="#lmdb" title="Permanent link">&para;</a></h3>
-<p>部分数据支持转换成LMDB格式，目前仅支持<code>SynthText</code>和<code>SynthAdd</code>数据集。</p>
-<p>要转换成LMDB格式，请运行：
+<h3 id="lmdb-dataset-format">LMDB Dataset Format<a class="headerlink" href="#lmdb-dataset-format" title="Permanent link">&para;</a></h3>
+<p>Some of the dataset can be converted to LMDB format. Currently, this is only supported for the <code>SynthText</code> and <code>SynthAdd</code> datasets.</p>
+<p>To convert to LMDB format, please run</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--dataset_name<span class="w"> </span>synthtext<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--task<span class="w"> </span>rec_lmdb<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--image_dir<span class="w"> </span>/path/to/SynthText<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--label_dir<span class="w"> </span>/path/to/SynthText_gt.mat<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--output_path<span class="w"> </span>ST_full
-</code></pre></div></p>
+</code></pre></div>
 
 
 
