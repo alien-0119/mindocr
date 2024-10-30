@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#mindocr-openi-training-guideline" class="md-skip">
+        <a href="#mindocr" class="md-skip">
           跳转至
         </a>
       
@@ -907,7 +907,7 @@
         
   
   <span class="md-ellipsis">
-    基于Python/C++和昇腾310的推理
+    MindOCR 离线推理
   </span>
   
 
@@ -1257,64 +1257,64 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#mindocr-openi-training-guideline" class="md-nav__link">
+  <a href="#mindocr" class="md-nav__link">
     <span class="md-ellipsis">
-      MindOCR OpenI Training Guideline
+      MindOCR 云上训练快速入门
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="MindOCR OpenI Training Guideline">
+    <nav class="md-nav" aria-label="MindOCR 云上训练快速入门">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#clone-the-project" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Clone the project
+      迁移外部项目
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#prepare-dataset" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare Dataset
+      准备数据集
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#prepare-pretrained-model-optional" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare pretrained model (optional)
+      准备预训练模型(可选)
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#new-training-task" class="md-nav__link">
+  <a href="#_4" class="md-nav__link">
     <span class="md-ellipsis">
-      New Training Task
+      新建训练任务
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#modify-existing-training-tasks" class="md-nav__link">
+  <a href="#_5" class="md-nav__link">
     <span class="md-ellipsis">
-      Modify existing training tasks
+      修改已有训练任务
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#view-training-status" class="md-nav__link">
+  <a href="#_6" class="md-nav__link">
     <span class="md-ellipsis">
-      View training status
+      状态查看
     </span>
   </a>
   
@@ -1349,7 +1349,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/tutorials/training_on_openi.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/tutorials/training_on_openi.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1358,7 +1358,7 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/tutorials/training_on_openi.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/tutorials/training_on_openi.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
@@ -1367,77 +1367,81 @@
 
   <h1>Training on openi</h1>
 
-<h2 id="mindocr-openi-training-guideline">MindOCR OpenI Training Guideline<a class="headerlink" href="#mindocr-openi-training-guideline" title="Permanent link">&para;</a></h2>
-<p>This tutorial introduces the training method of MindOCR using the <a href="https://openi.pcl.ac.cn/">OpenI</a> platform.</p>
-<h3 id="clone-the-project">Clone the project<a class="headerlink" href="#clone-the-project" title="Permanent link">&para;</a></h3>
-<p>Click on the plus sign and choose to New Migration to clone MindOCR from GitHub to the Openi platform.</p>
+<h2 id="mindocr">MindOCR 云上训练快速入门<a class="headerlink" href="#mindocr" title="Permanent link">&para;</a></h2>
+<p>本文主要介绍MindOCR借助OPENI<a href="https://openi.pcl.ac.cn/">启智</a>平台的训练方法。</p>
+<h3 id="_1">迁移外部项目<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h3>
+<p>点击启智平台主页面右上角的加号，从下拉菜单中选择迁移外部项目，将MindOCR从github迁移至启智平台。</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/5c526c9e-0979-4bcf-81e4-ae448beab7df">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/1.png"/>
 </div>
-<p>Enter the MindOCR git url: https://github.com/mindspore-lab/mindocr.git</p>
-<h3 id="prepare-dataset">Prepare Dataset<a class="headerlink" href="#prepare-dataset" title="Permanent link">&para;</a></h3>
-<p>You can upload your own dataset or associate the project with existing datasets on the platform.</p>
+<p>输入MindOCR的git url: https://github.com/mindspore-lab/mindocr.git 即可进行迁移。</p>
+<h3 id="_2">准备数据集<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
+<p>可以上传自己的数据集，也可以关联平台已有的数据集。</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/e5701090-6bbc-4cbb-9c96-07e6ecf1fcde">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/3.png"/>
 </div>
-<p>Uploading personal datasets requires setting the available clusters to NPU.</p>
+<p>上传个人数据集需将可用集群选择为NPU.</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/53098b94-88e3-407b-9062-eac155ee6424">
-</div>
-
-<h3 id="prepare-pretrained-model-optional">Prepare pretrained model (optional)<a class="headerlink" href="#prepare-pretrained-model-optional" title="Permanent link">&para;</a></h3>
-<p>To upload pre-trained weights, choose the Model tab of your repository.</p>
-<div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/be3f1237-05c2-40cb-9587-23f3b5f4d64c">
-</div>
-<p>During the import of a local model, set the model's framework to MindSpore.</p>
-<div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/6bebcca2-72ad-4c09-a5ea-537f84065626">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/4.png"/>
 </div>
 
-<h3 id="new-training-task">New Training Task<a class="headerlink" href="#new-training-task" title="Permanent link">&para;</a></h3>
-<p>Select Training Task -&gt; New Training Task in the Cloudbrain tab.</p>
+<h3 id="_3">准备预训练模型(可选)<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>如需加载预训练权重，可在模型选项卡中添加。</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/b8081a09-0e99-4c01-b986-860e0cb525f0">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/5.png"/>
 </div>
-<p>In computing resources choose Ascend NPU.</p>
+<p>导入本地模型时，模型框架续为MindSpore.</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/51ef33fa-b03e-4f6c-9dab-786f898816cd">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/6.png"/>
 </div>
-<p>Set the training entry point (Start File) and add run parameters.</p>
+
+<h3 id="_4">新建训练任务<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
+<p>在云脑选项卡中选择训练任务-&gt;新建训练任务。</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/eb3aa8cf-81f7-4ab5-a0f8-31aa04fce1e8">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/7.png"/>
+</div>
+<p>基本信息中的计算资源选择为Ascend NPU.</p>
+<div align=center>
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/8.png"/>
+</div>
+<p>设置参数并添加运行参数。</p>
+<div align=center>
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/12.png"/>
 </div>
 
 <ul>
-<li>To load pre-trained weights, choose the uploaded previously model file in the Select Model field and add <code>ckpt_dir</code> to the run parameters. The <code>ckpt_dir</code> parameter must have the following path: <code>/cache/*.ckpt</code>, where <code>*</code> is the model's file name.</li>
-<li>In the AI engine, it is necessary to select MindSpore version 1.9 or higher, and set the start file to <code>tools/train.py</code></li>
-<li>:warning: It is necessary to set <code>enable_modelarts</code> to <code>True</code> in the run parameters.</li>
-<li>The model's architecture is specified in the <code>config</code> file set in the run parameters. The prefix of the file is always <code>/home/work/user-job-dir/run-version-number</code>, where <code>run-version-number</code> for the newly created training task is usually <code>V0001</code>.</li>
+<li>如需加载预训练权重，可在选择模型中选择已上传的模型文件，并在运行参数中增加ckpt_dir参数，参数值为/cache/*.ckpt，*为实际的文件名</li>
+<li>AI引擎中需选择mindspore 1.9或以上的版本，启动文件为<code>tools/train.py</code></li>
+<li>运行参数需添加<code>enable_modelarts</code>，值为True</li>
+<li>运行参数中由<code>config</code>参数指定具体的模型算法，参数值前缀为/home/work/user-job-dir/运行版本号，新建训练任务的运行版本号通常为V0001</li>
 </ul>
-<h3 id="modify-existing-training-tasks">Modify existing training tasks<a class="headerlink" href="#modify-existing-training-tasks" title="Permanent link">&para;</a></h3>
-<p>Click the modify button of an existing training task to modify its parameters and run a new training task.</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/2efcd351-dd4a-4d6c-b0bd-0f8f82c12996">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/13.png"/>
 </div>
 
-<p>Note: <code>run-version-number</code> will change to Parents Version (current run version number) + 1, e.g. <code>V0002</code>.</p>
+<h3 id="_5">修改已有训练任务<a class="headerlink" href="#_5" title="Permanent link">&para;</a></h3>
+<p>点击已有训练任务的修改按钮，可以基于已有训练任务进行参数修改并运行新的训练任务。</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/18af7f35-a4e7-4c78-802d-3aa42b9edc78">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/14.png"/>
 </div>
 
-<h3 id="view-training-status">View training status<a class="headerlink" href="#view-training-status" title="Permanent link">&para;</a></h3>
-<p>Select a training task to view configuration information, logs, resource occupancy, and download model weights.</p>
+<p>注意：运行版本号=所基于版本号+1</p>
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/983d4525-45c9-4fa4-96f8-9359dc1322d8">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/15.png"/>
+</div>
+
+<h3 id="_6">状态查看<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
+<p>点击相应的任务名称，即可查看配置信息、日志、资源占用情况，进行结果下载。</p>
+<div align=center>
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/10.png"/>
 </div>
 
 <div align=center>
-<img width="600" src="https://github.com/mindspore-lab/mindocr/assets/52945530/b5e10ca2-b4ef-487f-928e-b5e5a8eeacbc">
+<img width='600' src="https://github.com/yuedongli1/images/raw/master/11.png"/>
 </div>
 
 <h2 id="reference">Reference<a class="headerlink" href="#reference" title="Permanent link">&para;</a></h2>
-<p>[1] Modified from https://github.com/mindspore-lab/mindyolo/blob/master/tutorials/cloud/openi.md</p>
+<p>[1] Modified from https://github.com/mindspore-lab/mindyolo/blob/master/tutorials/cloud/openi_CN.md</p>
 
 
 

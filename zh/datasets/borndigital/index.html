@@ -18,7 +18,7 @@
     
     
       
-        <title>Born-Digital Images Dataset - MindOCR Docs</title>
+        <title>Born-Digital Images 数据集 - MindOCR Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#born-digital-images-dataset" class="md-skip">
+        <a href="#born-digital-images" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Born-Digital Images Dataset
+              Born-Digital Images 数据集
             
           </span>
         </div>
@@ -907,7 +907,7 @@
         
   
   <span class="md-ellipsis">
-    基于Python/C++和昇腾310的推理
+    MindOCR 离线推理
   </span>
   
 
@@ -1259,28 +1259,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-downloading" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Downloading
+      数据集下载
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-preparation" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preparation
+      数据准备
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Preparation">
+    <nav class="md-nav" aria-label="数据准备">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-detection-task" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      For Detection Task
+      检测任务
     </span>
   </a>
   
@@ -1306,7 +1306,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/datasets/borndigital.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/datasets/borndigital.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1315,21 +1315,21 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/datasets/borndigital.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/datasets/borndigital.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="born-digital-images-dataset">Born-Digital Images Dataset<a class="headerlink" href="#born-digital-images-dataset" title="Permanent link">&para;</a></h1>
-<h2 id="data-downloading">Data Downloading<a class="headerlink" href="#data-downloading" title="Permanent link">&para;</a></h2>
-<p>The Born-Digital dataset <a href="https://rrc.cvc.uab.es/?ch=1">Official Website</a> | <a href="https://rrc.cvc.uab.es/?ch=1&amp;com=downloads">Download Link</a></p>
+<h1 id="born-digital-images">Born-Digital Images 数据集<a class="headerlink" href="#born-digital-images" title="Permanent link">&para;</a></h1>
+<h2 id="_1">数据集下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>原生数字图像数据集（Born-Digital Images）<a href="https://rrc.cvc.uab.es/?ch=1">官网</a> | <a href="https://rrc.cvc.uab.es/?ch=1&amp;com=downloads">下载链接</a></p>
 <blockquote>
-<p>Note: Please register an account to download this dataset.</p>
+<p>注意: 在下载之前，请先注册一个账号。</p>
 </blockquote>
-<p>This dataset is divided into 4 tasks: (1.1) Text Localization, (1.2) Text Segmentation, (1.3) Word Recognition, and  (1.4) End To End.  For now, we consider and download only the dataset for Task 1.1.</p>
-<p>After downloading the images and annotations, unzip the files and rename as appropriate e.g. <code>train_images</code> for the images and <code>train_labels</code> for the ground truths, after which the directory structure should be like as follows (ignoring the archive files):
+<p>该数据集分为4个任务: 任务1为文本定位, 任务2为文本分割, 任务3为单词识别, 任务4为端到端文本检测识别。这里我们仅考虑下载使用任务1数据集。</p>
+<p>下载图像和注释后，解压缩文件并根据需要重命名，例如<code>train_images</code>是图像，<code>train_labels</code> 是标签, 最终目录结构如下：
 <div class="highlight"><pre><span></span><code>Born-Digital
   |--- train_images
   |    |--- &lt;image_name&gt;.jpg
@@ -1340,17 +1340,17 @@
   |    |--- &lt;image_name&gt;.txt
   |    |--- ...
 </code></pre></div></p>
-<h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
-<h3 id="for-detection-task">For Detection Task<a class="headerlink" href="#for-detection-task" title="Permanent link">&para;</a></h3>
-<p>To prepare the data for text detection, you can run the following commands:</p>
+<h2 id="_2">数据准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">检测任务<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>要准备用于文本检测的数据，您可以运行以下命令：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--dataset_name<span class="w"> </span>borndigital<span class="w"> </span>--task<span class="w"> </span>det<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--image_dir<span class="w"> </span>path/to/Born-Digital/train_images/<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--label_dir<span class="w"> </span>path/to/Born-Digital/train_labels<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--output_path<span class="w"> </span>path/to/Born-Digital/det_gt.txt
 </code></pre></div>
-<p>The generated standard annotation file <code>det_gt.txt</code> will now be placed under the folder <code>Born-Digital/</code>.</p>
-<p><a href="../converters/">Back to dataset converters</a></p>
+<p>运行后，在文件夹<code>Born-Digital/</code>下会生成注释文件<code>det_gt.txt</code>。</p>
+<p><a href="../converters/">返回dataset converters</a></p>
 
 
 

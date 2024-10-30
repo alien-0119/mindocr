@@ -943,9 +943,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333-inference-python" class="md-nav__link">
+  <a href="#333-inference" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3.3 Inference (Python)
+      3.3.3 Inference
     </span>
   </a>
   
@@ -1128,7 +1128,7 @@
         
   
   <span class="md-ellipsis">
-    Python/C++ Inference on Ascend 310
+    MindOCR Offline Inference
   </span>
   
 
@@ -1623,9 +1623,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#333-inference-python" class="md-nav__link">
+  <a href="#333-inference" class="md-nav__link">
     <span class="md-ellipsis">
-      3.3.3 Inference (Python)
+      3.3.3 Inference
     </span>
   </a>
   
@@ -1694,7 +1694,7 @@
 <li><a href="#33-inference">3.3 Inference</a></li>
 <li><a href="#331-environment-preparation">3.3.1 Environment Preparation</a></li>
 <li><a href="#332-model-conversion">3.3.2 Model Conversion</a></li>
-<li><a href="#333-inference-python">3.3.3 Inference (Python)</a></li>
+<li><a href="#333-inference">3.3.3 Inference</a></li>
 </ul>
 </li>
 </ul>
@@ -1938,13 +1938,11 @@ To get the <code>device_ip</code> of the target device, run <code>cat /etc/hccn.
 <span class="w">                  </span>eval.label_file<span class="o">=</span><span class="s2">&quot;val_set/label&quot;</span>
 </code></pre></div></p>
 <h3 id="33-inference">3.3 Inference<a class="headerlink" href="#33-inference" title="Permanent link">&para;</a></h3>
-<p>MindOCR inference supports Ascend310/Ascend310P devices, supports <a href="https://www.mindspore.cn/lite">MindSpore Lite</a> and
-<a href="https://www.hiascend.com/document/detail/zh/canncommercial/63RC1/inferapplicationdev/aclcppdevg/aclcppdevg_000004.html">ACL</a>
-inference backend. <a href="../../inference/inference_tutorial/">Inference Tutorial</a> gives detailed steps on how to run inference with MindOCR, which include mainly three steps: environment preparation, model conversion, and inference.</p>
+<p>MindOCR inference supports Ascend310/Ascend310P devices and adopts <a href="https://www.mindspore.cn/lite">MindSpore Lite</a> inference backend. <a href="../../inference/inference_tutorial/">Inference Tutorial</a> gives detailed steps on how to run inference with MindOCR, which include mainly three steps: environment preparation, model conversion, and inference.</p>
 <h4 id="331-environment-preparation">3.3.1 Environment Preparation<a class="headerlink" href="#331-environment-preparation" title="Permanent link">&para;</a></h4>
-<p>Please refer to the <a href="../../inference/environment/">environment installation</a> for more information, and pay attention to selecting the ACL/Lite environment based on the model.</p>
+<p>Please refer to the <a href="../../inference/environment/">environment installation</a> for more information.</p>
 <h4 id="332-model-conversion">3.3.2 Model Conversion<a class="headerlink" href="#332-model-conversion" title="Permanent link">&para;</a></h4>
-<p>Before runing infernence, users need to export a MindIR file from the trained checkpoint. <a href="https://www.mindspore.cn/docs/en/r2.0/design/mindir.html">MindSpore IR (MindIR)</a> is a function-style IR based on graph representation. The MindIR filew stores the model structure and weight parameters needed for inference.</p>
+<p>Before runing infernence, users need to export a MindIR file from the trained checkpoint. <a href="https://www.mindspore.cn/docs/en/r2.2/design/mindir.html">MindSpore IR (MindIR)</a> is a function-style IR based on graph representation. The MindIR filew stores the model structure and weight parameters needed for inference.</p>
 <p>Given the trained dbnet checkpoint file, user can use the following commands to export MindIR:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/export.py<span class="w"> </span>--model_name_or_config<span class="w"> </span>dbnet_resnet50<span class="w"> </span>--data_shape<span class="w"> </span><span class="m">736</span><span class="w"> </span><span class="m">1280</span><span class="w"> </span>--local_ckpt_path<span class="w"> </span>/path/to/local_ckpt.ckpt
 <span class="c1"># or</span>
@@ -1952,7 +1950,7 @@ python<span class="w"> </span>tools/export.py<span class="w"> </span>--model_nam
 </code></pre></div>
 <p>The <code>data_shape</code> is the model input shape of height and width for MindIR file. It may change when the model is changed.</p>
 <p>Please refer to the <a href="../../inference/convert_tutorial/">Conversion Tutorial</a> for more details about model conversion.</p>
-<h4 id="333-inference-python">3.3.3 Inference (Python)<a class="headerlink" href="#333-inference-python" title="Permanent link">&para;</a></h4>
+<h4 id="333-inference">3.3.3 Inference<a class="headerlink" href="#333-inference" title="Permanent link">&para;</a></h4>
 <p>After model conversion, the <code>output.mindir</code> is obtained. Users can go to the <code>deploy/py_infer</code> directory, and use the following command for inference:</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>infer.py<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--input_images_dir<span class="o">=</span>/your_path_to/test_images<span class="w"> </span><span class="se">\</span>

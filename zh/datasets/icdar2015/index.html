@@ -18,7 +18,7 @@
     
     
       
-        <title>ICDAR 2015 Datasets - MindOCR Docs</title>
+        <title>ICDAR 2015 数据集 - MindOCR Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#icdar-2015-datasets" class="md-skip">
+        <a href="#icdar-2015" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              ICDAR 2015 Datasets
+              ICDAR 2015 数据集
             
           </span>
         </div>
@@ -907,7 +907,7 @@
         
   
   <span class="md-ellipsis">
-    基于Python/C++和昇腾310的推理
+    MindOCR 离线推理
   </span>
   
 
@@ -1259,13 +1259,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-downloading" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Downloading
+      数据集下载
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Downloading">
+    <nav class="md-nav" aria-label="数据集下载">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
@@ -1315,7 +1315,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/datasets/icdar2015.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/datasets/icdar2015.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1324,45 +1324,45 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/datasets/icdar2015.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/datasets/icdar2015.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="icdar-2015-datasets">ICDAR 2015 Datasets<a class="headerlink" href="#icdar-2015-datasets" title="Permanent link">&para;</a></h1>
-<h2 id="data-downloading">Data Downloading<a class="headerlink" href="#data-downloading" title="Permanent link">&para;</a></h2>
-<p>ICDAR 2015 <a href="https://rrc.cvc.uab.es/?ch=4">Official Website</a> | <a href="https://rrc.cvc.uab.es/?ch=4&amp;com=downloads">Download Link</a></p>
+<h1 id="icdar-2015">ICDAR 2015 数据集<a class="headerlink" href="#icdar-2015" title="Permanent link">&para;</a></h1>
+<h2 id="_1">数据集下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>ICDAR 2015 <a href="https://rrc.cvc.uab.es/?ch=4">官网</a> | <a href="https://rrc.cvc.uab.es/?ch=4&amp;com=downloads">下载链接</a></p>
 <blockquote>
-<p>Note: Please register an account to download this dataset.</p>
+<p>注意：在下载之前，请先注册一个账号。</p>
 </blockquote>
-<p>ICDAR 2015 Challenge has three tasks. Task 1 is Text Localization. Task 3 is Word Recognition. Task 4 is End-to-end Text Spotting. Task 2 Text Segmentation is not available.</p>
+<p>ICDAR 2015 挑战赛分为三个任务。任务1是文本定位。任务3是单词识别。任务4是端到端文本检测识别。任务2文本分割的数据不可用。</p>
 <h3 id="text-localization">Text Localization<a class="headerlink" href="#text-localization" title="Permanent link">&para;</a></h3>
-<p>The four files downloaded for task 1 are
+<p>有四个与任务1相关的文件需要下载， 它们分别是：</p>
 <div class="highlight"><pre><span></span><code>ch4_training_images.zip
 ch4_training_localization_transcription_gt.zip
 ch4_test_images.zip
 Challenge4_Test_Task1_GT.zip
-</code></pre></div></p>
+</code></pre></div>
 <h3 id="word-recognition">Word Recognition<a class="headerlink" href="#word-recognition" title="Permanent link">&para;</a></h3>
-<p>The three files downloaded for task 3 are
+<p>有三个与任务3相关的文件需要下载， 它们分别是：</p>
 <div class="highlight"><pre><span></span><code>ch4_training_word_images_gt.zip
 ch4_test_word_images_gt.zip
 Challenge4_Test_Task3_GT.txt
 </code></pre></div>
-The three files are only needed for training word recognition models. Training text detection models does not require the three files.</p>
+<p>这三个文件仅用于训练单词识别模型。训练文本检测模型不需要这三个文件。</p>
 <h3 id="e2e">E2E<a class="headerlink" href="#e2e" title="Permanent link">&para;</a></h3>
-<p>The nine files downloaded for task 4 are the union of the four files in the text localization task (task 1) and five vocabulary files
+<p>有九个与任务4相关的文件需要下载。其中包括任务1中的四个文件， 还有五个词汇文件。</p>
 <div class="highlight"><pre><span></span><code>ch4_training_vocabulary.txt
 ch4_training_vocabularies_per_image.zip
 ch4_test_vocabulary.txt
 ch4_test_vocabularies_per_image.zip
 GenericVocabulary.txt
 </code></pre></div>
-If you download a file named <code>Challenge4_Test_Task4_GT.zip</code>, please note that it is the same file as <code>Challenge4_Test_Task1_GT.zip</code>, except for its name. In this repository, we will use <code>Challenge4_Test_Task4_GT.zip</code> for ICDAR2015 dataset.</p>
+<p>如果您下载了一个名为 <code>Challenge4_Test_Task4_GT.zip</code> 的文件，请注意它与 <code>Challenge4_Test_Task1_GT.zip</code> 是相同的文件，除了名称不同。在这个repo中，我们将使用 <code>Challenge4_Test_Task4_GT.zip</code> 来代替 ICDAR2015 数据集的文件 <code>Challenge4_Test_Task1_GT.zip</code>。</p>
 </details>
-<p>After downloading the icdar2015 dataset, place all the files under <code>[path-to-data-dir]</code> folder:
+<p>在 icdar2015 下载完成以后, 请把所有的文件放在 <code>[path-to-data-dir]</code> 文件夹内，如下所示:
 <div class="highlight"><pre><span></span><code>path-to-data-dir/
   ic15/
     ch4_test_images.zip
@@ -1378,7 +1378,7 @@ If you download a file named <code>Challenge4_Test_Task4_GT.zip</code>, please n
     ch4_training_word_images_gt.zip
     Challenge4_Test_Task3_GT.zip
 </code></pre></div></p>
-<p><a href="../converters/">Back to dataset converters</a></p>
+<p><a href="../converters/">返回dataset converters</a></p>
 
 
 

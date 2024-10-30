@@ -18,7 +18,7 @@
     
     
       
-        <title>CTW Dataset - MindOCR Docs</title>
+        <title>CTW 数据集 - MindOCR Docs</title>
       
     
     
@@ -74,7 +74,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#ctw-dataset" class="md-skip">
+        <a href="#ctw" class="md-skip">
           跳转至
         </a>
       
@@ -108,7 +108,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              CTW Dataset
+              CTW 数据集
             
           </span>
         </div>
@@ -907,7 +907,7 @@
         
   
   <span class="md-ellipsis">
-    基于Python/C++和昇腾310的推理
+    MindOCR 离线推理
   </span>
   
 
@@ -1259,28 +1259,28 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#data-downloading" class="md-nav__link">
+  <a href="#_1" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Downloading
+      数据集下载
     </span>
   </a>
   
 </li>
       
         <li class="md-nav__item">
-  <a href="#data-preparation" class="md-nav__link">
+  <a href="#_2" class="md-nav__link">
     <span class="md-ellipsis">
-      Data Preparation
+      数据准备
     </span>
   </a>
   
-    <nav class="md-nav" aria-label="Data Preparation">
+    <nav class="md-nav" aria-label="数据准备">
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
-  <a href="#for-detection-task" class="md-nav__link">
+  <a href="#_3" class="md-nav__link">
     <span class="md-ellipsis">
-      For Detection Task
+      检测任务
     </span>
   </a>
   
@@ -1306,7 +1306,7 @@
                   
 
   
-    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/en/datasets/ctw.md" title="编辑此页" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/edit/master/docs/zh/datasets/ctw.md" title="编辑此页" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4zm10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1z"/></svg>
     </a>
@@ -1315,24 +1315,22 @@
     
       
     
-    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/en/datasets/ctw.md" title="查看本页的源代码" class="md-content__button md-icon">
+    <a href="https://github.com/mindspore-lab/mindocr/raw/master/docs/zh/datasets/ctw.md" title="查看本页的源代码" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.2 8.2 0 0 1-1.23-2"/></svg>
     </a>
   
 
 
-<h1 id="ctw-dataset">CTW Dataset<a class="headerlink" href="#ctw-dataset" title="Permanent link">&para;</a></h1>
-<h2 id="data-downloading">Data Downloading<a class="headerlink" href="#data-downloading" title="Permanent link">&para;</a></h2>
-<p>The CTW images dataset <a href="https://ctwdataset.github.io/">Official Website</a> | <a href="https://ctwdataset.github.io/downloads.html">Download Link</a></p>
+<h1 id="ctw">CTW 数据集<a class="headerlink" href="#ctw" title="Permanent link">&para;</a></h1>
+<h2 id="_1">数据集下载<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h2>
+<p>COCO-Text数据集<a href="https://ctwdataset.github.io/">官网</a> | <a href="https://ctwdataset.github.io/downloads.html">下载链接</a></p>
 <blockquote>
-<p>Note: Please fill in a form to download this dataset.</p>
+<p>注意: 您需要填写表格才能下载此数据集。</p>
 </blockquote>
-<p>The images are in 26 batches, i.e. 26 different .tar archived files of the format <code>images-trainval/ctw-trainval*.tar</code>. All 26 batches need to be downloaded.</p>
-<p>The CTW annotations (in JSON Lines format i.e. <code>.jsonl</code>) can be downloaded from <a href="https://ctwdataset.github.io/downloads.html">this download link</a>. The annotations archived file is named <code>ctw-annotations.tar.gz</code>.</p>
-<p>After downloading the zipped images, unzip the batches and collect all the images into a single folder e.g. <code>train_val/</code>.
-After downloading the zipped annotations, unzip them.
-Finally, the directory structure should look like this (ignoring the archive files):</p>
+<p>图像分为26批，即26个不同的.tar存档文件，格式为<code>images-trainval/ctw-trainval*.tar</code>。所有26批都需要下载。
+注释存档文件名为<code>ctw-annotations.tar.gz</code>。</p>
+<p>下载压缩后的图像后，解压后将所有图像收集到单个文件夹中，例如<code>train_val/</code>，注释也进行相应解压。最终目录结构如下：</p>
 <div class="highlight"><pre><span></span><code>CTW
   |--- train_val
   |    |--- 0000172.jpg
@@ -1343,18 +1341,18 @@ Finally, the directory structure should look like this (ignoring the archive fil
   |--- test_cls.jsonl
   |--- info.json
 </code></pre></div>
-<h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
-<h3 id="for-detection-task">For Detection Task<a class="headerlink" href="#for-detection-task" title="Permanent link">&para;</a></h3>
-<p>To prepare the data for text detection, you can run the following commands:</p>
+<h2 id="_2">数据准备<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
+<h3 id="_3">检测任务<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
+<p>要准备用于文本检测的数据，您可以运行以下命令：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>tools/dataset_converters/convert.py<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--dataset_name<span class="w"> </span>ctw<span class="w"> </span>--task<span class="w"> </span>det<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--image_dir<span class="w"> </span>path/to/CTW/train_val/<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--label_dir<span class="w"> </span>path/to/CTW/train.jsonl<span class="w"> </span><span class="se">\</span>
 <span class="w">    </span>--output_path<span class="w"> </span>path/to/CTW/det_gt.txt
 </code></pre></div>
-<p>The generated standard annotation file <code>det_gt.txt</code> will now be placed under the folder <code>CTW/</code>.</p>
-<p>Note that the <code>label_dir</code> flag may be altered to prepare the validation data.</p>
-<p><a href="../converters/">Back to dataset converters</a></p>
+<p>运行后，在文件夹<code>CTW/</code>下会生成注释文件<code>det_gt.txt</code>。</p>
+<p>请注意，可以更改<code>label_dir</code>以准备验证集。</p>
+<p><a href="../converters/">返回dataset converters</a></p>
 
 
 
