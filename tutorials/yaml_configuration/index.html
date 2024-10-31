@@ -1667,7 +1667,7 @@
 <td>Mixed precision mode</td>
 <td>O0</td>
 <td>O0/O1/O2/O3</td>
-<td>'O0' - no change. <br> 'O1' - convert the cells and operations in the whitelist to float16 precision, and keep the rest in float32 precision. <br> 'O2' - Keep the cells and operations in the blacklist with float32 precision, and convert the rest to float16 precision. <br> 'O3' - Convert all networks to float16 precision. <br> Notice: Model prediction or evaluation does not support 'O3' on GPU platform. If amp_level is set to 'O3' for model prediction and evaluation on GPU platform, the program will switch it to 'O2' automatically.</td>
+<td>'O0' - no change. <br> 'O1' - convert the cells and operations in the whitelist to float16 precision, and keep the rest in float32 precision. <br> 'O2' - Keep the cells and operations in the blacklist with float32 precision, and convert the rest to float16 precision. <br> 'O3' - Convert all networks to float16 precision. <br></td>
 </tr>
 <tr>
 <td>seed</td>

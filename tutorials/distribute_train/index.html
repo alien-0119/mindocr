@@ -901,30 +901,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. GPU
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. GPU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-run-scripts-with-openmpi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 Run scripts with OpenMPI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1461,30 +1437,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. GPU
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. GPU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-run-scripts-with-openmpi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 Run scripts with OpenMPI
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1518,8 +1470,7 @@
 
 <h1 id="distributed-parallel-training">Distributed parallel training<a class="headerlink" href="#distributed-parallel-training" title="Permanent link">&para;</a></h1>
 <p>This document provides a tutorial on distributed parallel training.
-There are two ways to train on the Ascend AI processor: by running scripts with OpenMPI or configuring <code>RANK_TABLE_FILE</code> for training.
-On GPU processors, scripts can be run with OpenMPI for training.</p>
+There are two ways to train on the Ascend AI processor: by running scripts with OpenMPI or configuring <code>RANK_TABLE_FILE</code> for training.</p>
 <blockquote>
 <p>Please ensure that the <code>distribute</code> parameter in the yaml file is set to <code>True</code> before running the following commands for distributed training.</p>
 </blockquote>
@@ -1530,10 +1481,6 @@ On GPU processors, scripts can be run with OpenMPI for training.</p>
 <li><a href="#12-configure-rank_table_file-for-training">1.2 Configure RANK_TABLE_FILE for training</a></li>
 <li><a href="#121-running-on-eight-all-devices">1.2.1 Running on Eight (All) Devices</a></li>
 <li><a href="#122-running-on-four-partial-devices">1.2.2 Running on Four (Partial) Devices</a></li>
-</ul>
-</li>
-<li><a href="#2-gpu">2. GPU</a><ul>
-<li><a href="#21-run-scripts-with-openmpi">2.1 Run scripts with OpenMPI</a></li>
 </ul>
 </li>
 </ul>
@@ -1714,16 +1661,6 @@ When training other models, simply replace the yaml config file path in the scri
 <span class="k">done</span>
 </code></pre></div>
 <p>Note that the <code>DEVICE_ID</code> and <code>RANK_ID</code> should be matched with <code>hccl_4p_4567_127.0.0.1.json</code>.</p>
-<h2 id="2-gpu">2. GPU<a class="headerlink" href="#2-gpu" title="Permanent link">&para;</a></h2>
-<h3 id="21-run-scripts-with-openmpi">2.1 Run scripts with OpenMPI<a class="headerlink" href="#21-run-scripts-with-openmpi" title="Permanent link">&para;</a></h3>
-<p>On GPU hardware platform, only OpenMPI's <code>mpirun</code> can be used for distributed training. The following command will run training on devices <code>0</code> and <code>1</code>.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># n is the number of GPUs used in training</span>
-mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
-</code></pre></div>
-<p>In the case when users want to run training on <code>device 2</code> and <code>device 3</code>, users can run <code>export CUDA_VISIBLE_DEVICES=2,3</code> before running the command above, or run the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># n is the number of GPUs used in training</span>
-<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">2</span>,3<span class="w"> </span>mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
-</code></pre></div>
 
 
 

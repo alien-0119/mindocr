@@ -1918,13 +1918,13 @@ common:
 <p>If users do not need to use the pre-trained model, they can simply delete <code>model.pretrained</code>.</p>
 <h3 id="start-training">Start Training<a class="headerlink" href="#start-training" title="Permanent link">&para;</a></h3>
 <h4 id="distributed-training">Distributed Training<a class="headerlink" href="#distributed-training" title="Permanent link">&para;</a></h4>
-<p>In the case of a large amount of data, we recommend that users use distributed training. For distributed training across multiple Ascend 910 devices or GPU devices, please modify the configuration parameter <code>system.distribute</code> to True, for example:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># To perform distributed training on 4 GPU/Ascend devices</span>
+<p>In the case of a large amount of data, we recommend that users use distributed training. For distributed training across multiple Ascend 910 devices devices, please modify the configuration parameter <code>system.distribute</code> to True, for example:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># To perform distributed training on 4 Ascend devices</span>
 mpirun<span class="w"> </span>-n<span class="w"> </span><span class="m">4</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/rec/crnn/crnn_resnet34_ch.yaml
 </code></pre></div>
 <h4 id="single-device-training">Single Device Training<a class="headerlink" href="#single-device-training" title="Permanent link">&para;</a></h4>
 <p>If you want to train or fine-tune the model on a smaller dataset without distributed training, please modify the configuration parameter <code>system.distribute</code> to <code>False</code> and run:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Training on single CPU/GPU/Ascend devices</span>
+<div class="highlight"><pre><span></span><code><span class="c1"># Training on single CPU/Ascend devices</span>
 python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/rec/crnn/crnn_resnet34_ch.yaml
 </code></pre></div>
 <p>The training results (including checkpoint, performance of each epoch, and curve graph) will be saved in the directory configured by the <code>train.ckpt_save_dir</code> parameter in the YAML configuration file, which is set to <code>./tmp_rec</code> by default.</p>

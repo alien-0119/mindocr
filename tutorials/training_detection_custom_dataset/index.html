@@ -1900,15 +1900,12 @@ It uses <code>SGD</code> optimizer (in <code>mindocr/optim/optim.factory.py</cod
 <ul>
 <li>Distributed training</li>
 </ul>
-<p>In distributed training, <code>distribute</code> in yaml config file should be True. On both GPU and Ascend devices, users can use <code>mpirun</code> to launch distributed training. For example, using <code>device:0</code> and <code>device:1</code> to train:</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># n is the number of GPUs/NPUs</span>
+<p>In distributed training, <code>distribute</code> in yaml config file should be True. On Ascend devices, users can use <code>mpirun</code> to launch distributed training. For example, using <code>device:0</code> and <code>device:1</code> to train:</p>
+<div class="highlight"><pre><span></span><code><span class="c1"># n is the number of NPUs</span>
 mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
 </code></pre></div>
 <p>Sometimes, users may want to specify the device ids to run distributed training, for example, <code>device:2</code> and <code>device:3</code>.</p>
-<p>On GPU devices, before running the <code>mpirun</code> command above, users can run the following command:</p>
-<div class="highlight"><pre><span></span><code><span class="nb">export</span><span class="w"> </span><span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">2</span>,3
-</code></pre></div>
-<p>On Ascend devices, users should create a <code>rank_table.json</code> like this:
+<p>On Ascend devices, users should create a <code>rank_table.json</code> like this:</p>
 <div class="highlight"><pre><span></span><code><span class="err">Copy</span><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
 <span class="w">    </span><span class="nt">&quot;server_count&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1&quot;</span><span class="p">,</span>
@@ -1924,7 +1921,7 @@ mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span
 <span class="w">    </span><span class="nt">&quot;status&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;completed&quot;</span>
 <span class="p">}</span>
 </code></pre></div>
-To get the <code>device_ip</code> of the target device, run <code>cat /etc/hccn.conf</code> and look for the value of <code>address_x</code>, which is the ip address. More details can be found in <a href="../distribute_train/">distributed training tutorial</a>.</p>
+<p>To get the <code>device_ip</code> of the target device, run <code>cat /etc/hccn.conf</code> and look for the value of <code>address_x</code>, which is the ip address. More details can be found in <a href="../distribute_train/">distributed training tutorial</a>.</p>
 <h3 id="32-evaluation">3.2 Evaluation<a class="headerlink" href="#32-evaluation" title="Permanent link">&para;</a></h3>
 <p>To evaluate the accuracy of the trained model, users can use <code>tools/eval.py</code>.</p>
 <p>Take standalone evaluation as an example. In the yaml config file, <code>system.distribute</code> should be <code>False</code>; the <code>eval.ckpt_load_path</code> should be the target ckpt path; <code>eval.dataset_root</code>, <code>eval.data_dir</code>, and <code>eval.label_file</code> should be correctly specified. Then the evaluation can be started by running:</p>

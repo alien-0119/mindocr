@@ -903,30 +903,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. GPU
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. GPU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-openmpi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 通过OpenMPI运行脚本进行训练
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1463,30 +1439,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#2-gpu" class="md-nav__link">
-    <span class="md-ellipsis">
-      2. GPU
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="2. GPU">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#21-openmpi" class="md-nav__link">
-    <span class="md-ellipsis">
-      2.1 通过OpenMPI运行脚本进行训练
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1519,7 +1471,7 @@
 
 
 <h1 id="_1">分布式并行训练<a class="headerlink" href="#_1" title="Permanent link">&para;</a></h1>
-<p>本文档提供分布式并行训练的教程，在Ascend处理器上有两种方式可以进行单机多卡训练，通过OpenMPI运行脚本或通过配置RANK_TABLE_FILE进行单机多卡训练。在GPU处理器上可通过OpenMPI运行脚本进行单机多卡训练。</p>
+<p>本文档提供分布式并行训练的教程，在Ascend处理器上有两种方式可以进行单机多卡训练，通过OpenMPI运行脚本或通过配置RANK_TABLE_FILE进行单机多卡训练。</p>
 <blockquote>
 <p>请确保在运行以下命令进行分布式训练之前，将 <code>yaml</code> 文件中的 <code>distribute</code> 参数设置为 <code>True</code>。</p>
 </blockquote>
@@ -1530,10 +1482,6 @@
 <li><a href="#12-配置rank_table_file进行训练">1.2 配置RANK_TABLE_FILE进行训练</a></li>
 <li><a href="#121-使用八个全部设备进行训练">1.2.1 使用八个（全部）设备进行训练</a></li>
 <li><a href="#122-使用四个部分设备进行训练">1.2.2 使用四个（部分）设备进行训练</a></li>
-</ul>
-</li>
-<li><a href="#2-gpu">2. GPU</a><ul>
-<li><a href="#21-通过openmpi运行脚本进行训练">2.1 通过OpenMPI运行脚本进行训练</a></li>
 </ul>
 </li>
 </ul>
@@ -1648,9 +1596,9 @@ mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span
 <p>通过运行以下命令创建 <code>rank_table.json</code>：</p>
 <div class="highlight"><pre><span></span><code>python<span class="w"> </span>hccl_tools.py<span class="w"> </span>--device_num<span class="w"> </span><span class="s2">&quot;[4,8)&quot;</span>
 </code></pre></div>
-<p>输出为：
+<p>输出为：</p>
 <div class="highlight"><pre><span></span><code>hccl_4p_4567_127.0.0.1.json
-</code></pre></div></p>
+</code></pre></div>
 <p>其中， <code>hccl_4p_4567_127.0.0.1.json</code> 的示例为:</p>
 <div class="highlight"><pre><span></span><code><span class="p">{</span>
 <span class="w">    </span><span class="nt">&quot;version&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;1.0&quot;</span><span class="p">,</span>
@@ -1709,16 +1657,6 @@ mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span
 <span class="k">done</span>
 </code></pre></div>
 <p>注意， <code>DEVICE_ID</code> 和 <code>RANK_ID</code> 的组合关系应该跟 <code>hccl_4p_4567_127.0.0.1.json</code> 文件中相吻合.</p>
-<h2 id="2-gpu">2. GPU<a class="headerlink" href="#2-gpu" title="Permanent link">&para;</a></h2>
-<h3 id="21-openmpi">2.1 通过OpenMPI运行脚本进行训练<a class="headerlink" href="#21-openmpi" title="Permanent link">&para;</a></h3>
-<p>在 GPU 硬件平台上，MindSpore也支持使用 <code>OpenMPI</code> 的 <code>mpirun</code> 命令来运行分布式训练。以下命令将在 <code>device 0</code>和 <code>device 1</code> 上运行训练。</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># n 代表训练使用到的GPU数量</span>
-mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
-</code></pre></div>
-<p>如果用户想在 <code>device 2</code> 和 <code>device 3</code> 上运行训练，用户可以在运行上面的命令之前运行 <code>export CUDA_VISIBLE_DEVICES=2,3</code>，或者直接运行以下命令：</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># n 代表训练使用到的GPU数量</span>
-<span class="nv">CUDA_VISIBLE_DEVICES</span><span class="o">=</span><span class="m">2</span>,3<span class="w"> </span>mpirun<span class="w"> </span>--allow-run-as-root<span class="w"> </span>-n<span class="w"> </span><span class="m">2</span><span class="w"> </span>python<span class="w"> </span>tools/train.py<span class="w"> </span>--config<span class="w"> </span>configs/det/dbnet/db_r50_icdar15.yaml
-</code></pre></div>
 
 
 
