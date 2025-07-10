@@ -4,7 +4,6 @@
 Hacked together by / Copyright 2020 Ross Wightman
 """
 
-"""model registry and list"""
 import fnmatch
 import sys
 from collections import defaultdict

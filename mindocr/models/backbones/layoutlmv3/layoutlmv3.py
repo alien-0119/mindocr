@@ -637,7 +637,7 @@ class LayoutLMv3Model(nn.Cell):
         return (sequence_output,) + encoder_outputs[1:]
 
 
-# This code is adapted from 
+# This code is adapted from
 # https://github.com/facebookresearch/detectron2/blob/main/detectron2/modeling/backbone/fpn.py
 class FPNForLayout(FPN):
     def __init__(self,
