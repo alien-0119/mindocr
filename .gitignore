@@ -137,3 +137,6 @@ dmypy.json
 
 # mindspore compile related
 rank_*/
+
+# DS_Store (MacOS)
+.DS_Store
