@@ -1,6 +1,6 @@
 # copyright (c) 2021 PaddlePaddle Authors. All Rights Reserve.
 #
-# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# This code is adapted from https://github.com/PaddlePaddle/PaddleOCR
 # with modifications to run on MindSpore.
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
