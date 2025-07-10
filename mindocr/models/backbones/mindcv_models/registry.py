@@ -1,3 +1,9 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+""" Model Registry
+Hacked together by / Copyright 2020 Ross Wightman
+"""
+
 """model registry and list"""
 import fnmatch
 import sys

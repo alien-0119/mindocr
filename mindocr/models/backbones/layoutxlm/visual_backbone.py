@@ -1,3 +1,8 @@
+# This code is adapted from https://github.com/facebookresearch/detectron2
+# with modifications to run on MindSpore.
+
+# Copyright (c) Facebook, Inc. and its affiliates.
+
 import math
 import os
 

@@ -1,3 +1,6 @@
+# This code is adapted from https://github.com/JiaquanYe/TableMASTER-mmocr
+# with modifications to run on MindSpore.
+
 import mindspore.nn as nn
 import mindspore.ops as ops
 from mindspore import Tensor

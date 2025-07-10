@@ -1,3 +1,4 @@
+# This code is adapted from https://github.com/PaddlePaddle/PaddleOCR
 
 import cv2
 import numpy as np

@@ -1,3 +1,5 @@
+# This code is adapted from https://github.com/JiaquanYe/TableMaster-mmocr
+
 import copy
 import glob
 import math

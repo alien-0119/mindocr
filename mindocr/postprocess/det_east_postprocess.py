@@ -1,3 +1,6 @@
+# This code is adapted from https://github.com/sakurariven/east
+# with modifications to run on MindSpore.
+
 import math
 
 import numpy as np

@@ -1,4 +1,43 @@
-"""EfficientNet Architecture."""
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
+""" The EfficientNet Family in PyTorch
+
+An implementation of EfficienNet that covers variety of related models with efficient architectures:
+
+* EfficientNet-V2
+  - `EfficientNetV2: Smaller Models and Faster Training` - https://arxiv.org/abs/2104.00298
+
+* EfficientNet (B0-B8, L2 + Tensorflow pretrained AutoAug/RandAug/AdvProp/NoisyStudent weight ports)
+  - EfficientNet: Rethinking Model Scaling for CNNs - https://arxiv.org/abs/1905.11946
+  - CondConv: Conditionally Parameterized Convolutions for Efficient Inference - https://arxiv.org/abs/1904.04971
+  - Adversarial Examples Improve Image Recognition - https://arxiv.org/abs/1911.09665
+  - Self-training with Noisy Student improves ImageNet classification - https://arxiv.org/abs/1911.04252
+
+* MixNet (Small, Medium, and Large)
+  - MixConv: Mixed Depthwise Convolutional Kernels - https://arxiv.org/abs/1907.09595
+
+* MNasNet B1, A1 (SE), Small
+  - MnasNet: Platform-Aware Neural Architecture Search for Mobile - https://arxiv.org/abs/1807.11626
+
+* FBNet-C
+  - FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable NAS - https://arxiv.org/abs/1812.03443
+
+* Single-Path NAS Pixel1
+  - Single-Path NAS: Designing Hardware-Efficient ConvNets - https://arxiv.org/abs/1904.02877
+
+* TinyNet
+    - Model Rubik's Cube: Twisting Resolution, Depth and Width for TinyNets - https://arxiv.org/abs/2010.14819
+    - Definitions & weights borrowed from https://github.com/huawei-noah/CV-Backbones/tree/master/tinynet_pytorch
+
+* And likely more...
+
+The majority of the above models (EfficientNet*, MixNet, MnasNet) and original weights were made available
+by Mingxing Tan, Quoc Le, and other members of their Google Brain team. Thanks for consistently releasing
+the models and weights open source!
+
+Hacked together by / Copyright 2019, Ross Wightman
+"""
 
 import copy
 import math

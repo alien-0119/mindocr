@@ -1,6 +1,13 @@
-"""
-MindSpore implementation of `ResNeSt`.
-Refer to ResNeSt: Split-Attention Networks.
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
+""" ResNeSt Models
+
+Paper: `ResNeSt: Split-Attention Networks` - https://arxiv.org/abs/2004.08955
+
+Adapted from original PyTorch impl w/ weights at https://github.com/zhanghang1989/ResNeSt by Hang Zhang
+
+Modified for torchscript compat, and consistency with timm by Ross Wightman
 """
 
 from typing import List, Optional, Type

@@ -1,3 +1,6 @@
+# This code is adapted from https://github.com/WenmuZhou/DBNet.pytorch
+# with modifications to run on MindSpore.
+
 from typing import List, Tuple, Union
 
 import cv2

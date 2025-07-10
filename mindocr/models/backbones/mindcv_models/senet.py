@@ -1,6 +1,17 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
 """
-MindSpore implementation of `SENet`.
-Refer to Squeeze-and-Excitation Networks.
+SEResNet implementation from Cadene's pretrained models
+https://github.com/Cadene/pretrained-models.pytorch/blob/master/pretrainedmodels/models/senet.py
+Additional credit to https://github.com/creafz
+
+Original model: https://github.com/hujie-frank/SENet
+
+ResNet code gently borrowed from
+https://github.com/pytorch/vision/blob/master/torchvision/models/resnet.py
+
+FIXME I'm deprecating this model and moving them to ResNet as I don't want to maintain duplicate
+support for extras like dilation, switchable BN/activations, feature extraction, etc that don't exist here.
 """
 
 import math

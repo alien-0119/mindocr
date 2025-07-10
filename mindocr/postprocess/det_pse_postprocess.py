@@ -1,3 +1,6 @@
+# This code is adapted from https://github.com/whai362/PSENet
+# with modifications to run on MindSpore.
+
 import cv2
 import numpy as np
 

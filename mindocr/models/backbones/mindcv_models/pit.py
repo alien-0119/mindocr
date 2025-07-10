@@ -1,7 +1,18 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
+""" Pooling-based Vision Transformer (PiT) in MindSpore
+
+A MindSpore implement of Pooling-based Vision Transformers as described in
+'Rethinking Spatial Dimensions of Vision Transformers' - https://arxiv.org/abs/2103.16302
+
+This code was adapted from the original version at https://github.com/naver-ai/pit, original copyright below.
+
+Modifications for timm by / Copyright 2020 Ross Wightman
 """
-MindSpore implementation of `PiT`.
-Refer to Rethinking Spatial Dimensions of Vision Transformers.
-"""
+# PiT
+# Copyright 2021-present NAVER Corp.
+# Apache License v2.0
 
 import math
 from typing import List

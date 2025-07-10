@@ -1,6 +1,12 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
 """
-MindSpore implementation of pnasnet.
-Refer to Progressive Neural Architecture Search.
+ pnasnet5large implementation grabbed from Cadene's pretrained models
+ Additional credit to https://github.com/creafz
+
+ https://github.com/Cadene/pretrained-models.pytorch/blob/master/pretrainedmodels/models/pnasnet.py
+
 """
 
 import math

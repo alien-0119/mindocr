@@ -1,6 +1,14 @@
-"""
-MindSpore implementation of `HRNet`.
-Refer to Deep High-Resolution Representation Learning for Visual Recognition
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+""" HRNet
+
+Copied from https://github.com/HRNet/HRNet-Image-Classification
+
+Original header:
+  Copyright (c) Microsoft
+  Licensed under the MIT License.
+  Written by Bin Xiao (Bin.Xiao@microsoft.com)
+  Modified by Ke Sun (sunk@mail.ustc.edu.cn)
 """
 from typing import Any, Dict, List, Optional, Tuple, Type, Union
 

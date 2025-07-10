@@ -1,6 +1,27 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
 """
-MindSpore implementation of Xception.
-Refer to Xception: Deep Learning with Depthwise Separable Convolutions.
+Ported to pytorch thanks to [tstandley](https://github.com/tstandley/Xception-PyTorch)
+
+@author: tstandley
+Adapted by cadene
+
+Creates an Xception Model as defined in:
+
+Francois Chollet
+Xception: Deep Learning with Depthwise Separable Convolutions
+https://arxiv.org/pdf/1610.02357.pdf
+
+This weights ported from the Keras implementation. Achieves the following performance on the validation set:
+
+Loss:0.9173 Prec@1:78.892 Prec@5:94.292
+
+REMEMBER to set your image size to 3x299x299 for both test and validation
+
+normalize = transforms.Normalize(mean=[0.5, 0.5, 0.5],
+                                  std=[0.5, 0.5, 0.5])
+
+The resize parameter of the validation transform should be 333, and make sure to center crop at 299x299
 """
 
 import mindspore.common.initializer as init

@@ -1,6 +1,9 @@
-"""
-MindSpore implementation of `DenseNet`.
-Refer to: Densely Connected Convolutional Networks
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
+"""Pytorch Densenet implementation w/ tweaks
+This file is a copy of https://github.com/pytorch/vision 'densenet.py' (BSD-3-Clause) with
+fixed kwargs passthrough and addition of dynamic global avg/max pool.
 """
 
 import math

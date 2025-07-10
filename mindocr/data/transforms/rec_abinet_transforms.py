@@ -1,3 +1,6 @@
+# This code is adapted from https://github.com/FangShancheng/ABINet
+# with modifications to run on MindSpore.
+
 """
 transform for text recognition tasks.
 """

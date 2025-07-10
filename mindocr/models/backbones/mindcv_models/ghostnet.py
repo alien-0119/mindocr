@@ -1,4 +1,17 @@
-"""MindSpore implementation of `GhostNet`."""
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
+
+"""
+An implementation of GhostNet & GhostNetV2 Models as defined in:
+GhostNet: More Features from Cheap Operations. https://arxiv.org/abs/1911.11907
+GhostNetV2: Enhance Cheap Operation with Long-Range Attention. https://proceedings.neurips.cc/paper_files/paper/2022/file/40b60852a4abdaa696b5a1a78da34635-Paper-Conference.pdf
+GhostNetV3: Exploring the Training Strategies for Compact Models. https://arxiv.org/abs/2404.11202
+
+The train script & code of models at:
+Original model: https://github.com/huawei-noah/CV-backbones/tree/master/ghostnet_pytorch
+Original model: https://github.com/huawei-noah/Efficient-AI-Backbones/blob/master/ghostnetv2_pytorch/model/ghostnetv2_torch.py
+Original model: https://github.com/huawei-noah/Efficient-AI-Backbones/blob/master/ghostnetv3_pytorch/ghostnetv3.py
+"""
 
 import math
 

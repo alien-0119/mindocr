@@ -1,5 +1,12 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
 """
 CoaT architecture.
+
+Paper: Co-Scale Conv-Attentional Image Transformers - https://arxiv.org/abs/2104.06399
+
+Official CoaT code at: https://github.com/mlpc-ucsd/CoaT
+
 Modified from timm/models/vision_transformer.py
 """
 from typing import Union

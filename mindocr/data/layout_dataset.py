@@ -1,3 +1,8 @@
+# This code is adapted from https://github.com/ultralytics/yolov5
+# with modifications to run on MindSpore.
+
+# Ultralytics 🚀 AGPL-3.0 License - https://ultralytics.com/license
+
 import glob
 import hashlib
 import json

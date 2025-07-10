@@ -1,5 +1,10 @@
+# This code is adapted from https://github.com/huggingface/pytorch-image-models
+# with modifications to run on MindSpore.
 """ Selective Kernel Convolution/Attention
+
 Paper: Selective Kernel Networks (https://arxiv.org/abs/1903.06586)
+
+Hacked together by / Copyright 2020 Ross Wightman
 """
 from typing import List, Optional, Union
 
