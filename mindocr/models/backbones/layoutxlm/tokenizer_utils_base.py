@@ -1,7 +1,6 @@
-# coding=utf-8
 # Copyright 2018 The Google AI Language Team Authors and The HuggingFace Inc. team.
-# Copyright (c) 2018, NVIDIA CORPORATION.  All rights reserved.
-# Copyright (c) 2020 PaddlePaddle Authors. All Rights Reserved.
+# Copyright (c) 2018, NVIDIA CORPORATION. All Rights Reserved.
+# Copyright (c) 2020, PaddlePaddle Authors. All Rights Reserved.
 #
 # This code is adapted from https://github.com/PaddlePaddle/PaddleNLP
 # with modifications to run on MindSpore.

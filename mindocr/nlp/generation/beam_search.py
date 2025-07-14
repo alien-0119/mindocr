@@ -1,4 +1,3 @@
-# coding=utf-8
 # Copyright 2020 The HuggingFace Team Inc.
 #
 # This code is adapted from https://github.com/huggingface/transformers

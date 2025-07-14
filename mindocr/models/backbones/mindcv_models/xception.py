@@ -1,7 +1,7 @@
 # This code is adapted from https://github.com/huggingface/pytorch-image-models
 # with modifications to run on MindSpore.
 """
-Ported to pytorch thanks to [tstandley](https://github.com/tstandley/Xception-PyTorch)
+Ported to MindSpore thanks to [tstandley](https://github.com/tstandley/Xception-PyTorch)
 
 @author: tstandley
 Adapted by cadene
